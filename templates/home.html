@@ -9,10 +9,10 @@
         Hi {{ user.email }}!
         <p>Last login time : {{ user.last_login }}</p>
         <p>The date account was created : {{ user.date_joined }}</p>
-        <p><a href="{% url 'logout' %}">Log Out</a></p>
+        <p><a href="{% url 'account_logout' %}">Log Out</a></p>
     {% else %}
         <p>You are not logged in</p>
-        <a href="{% url 'login' %}">Log In</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'account_login' %}">Log In</a>
+        <a href="{% url 'account_signup' %}">Sign Up</a>
     {% endif %}
 {% endblock content %}
